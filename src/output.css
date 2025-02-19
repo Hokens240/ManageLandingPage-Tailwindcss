@@ -821,6 +821,9 @@
   .max-w-screen {
     max-width: 100vw;
   }
+  .max-w-sm {
+    max-width: var(--container-sm);
+  }
   .min-w-screen {
     min-width: 100vw;
   }
@@ -1808,6 +1811,12 @@
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
   }
+  .text-blue-300 {
+    color: var(--color-blue-300);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -2261,6 +2270,13 @@
       }
     }
   }
+  .hover\:text-gray-500 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-500);
+      }
+    }
+  }
   .md\:block {
     @media (width >= 48rem) {
       display: block;
@@ -2279,6 +2295,11 @@
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
+    }
+  }
+  .md\:justify-start {
+    @media (width >= 48rem) {
+      justify-content: flex-start;
     }
   }
   .md\:space-y-0 {
